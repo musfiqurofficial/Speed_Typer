@@ -3,6 +3,7 @@ import React from 'react';
 const Qus = () => {
     return (
         <div>
+            {/* How dose React Work? */}
             <div className='mb-10 bg-zinc-800 text-white p-8 rounded-lg '>
                 <h2 className='text-2xl font-bold text-amber-300'>01. How dose React Work?</h2>
                 <p ><span className='text-xl font-bold text-amber-400'>Ans:</span> <span className='text-xl font-semibold'>R</span>eact is a JavaScript library (not a framework) that creates user interfaces (UIs) in a predictable and efficient way using declarative code. You can use it to help build single page applications and mobile apps, or to build complex apps if you utilise it with other libraries.</p>
