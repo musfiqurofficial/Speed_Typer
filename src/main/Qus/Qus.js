@@ -13,6 +13,7 @@ const Qus = () => {
                 <h2 className='text-2xl font-bold text-amber-300'>02. Difference between props and state.</h2>
                 <p><span className='text-xl font-bold text-amber-400'>Ans:</span> <span className='text-xl font-semibold'>P</span>rops are used to pass data from one component to another. The state is a local data storage that is local to the component only and cannot be passed to other components. The this. setState property is used to update the state values in the component.</p>
             </div>
+            What else does the useEffect API do other than load data?
             <div className='bg-zinc-800 text-white p-8 rounded-lg '>
                 <h2 className='text-2xl font-bold text-amber-300'>03. What else does the useEffect API do other than load data?</h2>
                 <ul className='list-disc mx-10'>
