@@ -9,10 +9,10 @@ function App() {
     const allTime = [...exerciseTime, time]
     setExerciseTime(allTime);
   }
-  
+
   return (
-    <div className="grid grid-cols-4 bg-stone-200">
-      <div className='container mx-auto w-11/12 col-span-3 mt-20'>
+    <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 bg-stone-200">
+      <div className='container mx-auto w-11/12 lg:col-span-3 md:col-span-2 sm:col-span mt-20'>
         <h1 className='inline-flex items-center flex-row-reverse font-bold text-4xl text-sky-500'><img src="zero-gym.png" className='w-24 ' alt="" />Zero Gym</h1>
         <h3 className='font-semibold text-2xl'>Select today's exercise</h3>
         <Gymnasium addToExerciseTime={addToExerciseTime}></Gymnasium>

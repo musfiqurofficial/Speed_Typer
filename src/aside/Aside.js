@@ -8,6 +8,14 @@ const Aside = ({ exerciseTime }) => {
 
     const addBreakTime = (e) => {
         setBreakTime(e.target.innerText)
+        const timeDB = localStorage.getItem(e.target.innerText);
+        if (timeDB) {
+            const newTime = parseInt(timeDB) + 1
+            localStorage.setItem(e.target.innerText, newTime)
+        } else {
+
+            localStorage.setItem(e.target.innerText, 1)
+        }
     }
     console.log(breakTime)
     return (

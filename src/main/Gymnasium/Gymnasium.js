@@ -11,7 +11,7 @@ const Gymnasium = (props) => {
             .then(data => setGymnasium(data))
     }, [])
     return (
-        <div className='grid grid-cols-3 gap-4 mt-4 mb-20'>
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 mt-4 mb-20'>
             {
                 gymnasium.map(gym => <Gym
                     addToExerciseTime={props.addToExerciseTime}
