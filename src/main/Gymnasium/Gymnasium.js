@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import Gym from '../Gym/Gym';
 
-const Gymnasium = () => {
+const Gymnasium = (props) => {
     const [gymnasium, setGymnasium] = useState([])
     useEffect(() => {
         fetch('data.json')
@@ -13,9 +13,12 @@ const Gymnasium = () => {
     return (
         <div className='grid grid-cols-3 gap-4 mt-4 mb-20'>
             {
-                gymnasium.map(gym => <Gym key={gym.id} gym={gym}></Gym>)
+                gymnasium.map(gym => <Gym
+                    addToExerciseTime={props.addToExerciseTime}
+                    key={gym.id}
+                    gym={gym}
+                ></Gym>)
             }
-
         </div>
     );
 };
