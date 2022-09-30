@@ -1,6 +1,10 @@
 import React from 'react';
 import { useState } from 'react';
 import './Aside.css'
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Aside = ({ exerciseTime }) => {
     const [breakTime, setBreakTime] = useState(0)
 
@@ -17,7 +21,17 @@ const Aside = ({ exerciseTime }) => {
             localStorage.setItem(e.target.innerText, 1)
         }
     }
-    console.log(breakTime)
+
+    const notify = () => toast.success("🎉Congratulation!🎉", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+    });
+
     return (
         <div className='container mx-auto w-11/12 mt-3'>
             <div className='flex items-center'>
@@ -79,10 +93,22 @@ const Aside = ({ exerciseTime }) => {
                 </div>
             </div>
             <div className='container w-11/12 my-10 flex justify-center'>
-                <button className="w-11/12 py-4 text-lg font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                <button onClick={notify} className="w-11/12 py-4 text-lg font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                     Activity Completed
                 </button>
+                <ToastContainer
+                    position="top-center"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                />
             </div>
+
         </div>
     );
 };
